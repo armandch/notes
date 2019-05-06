@@ -108,6 +108,8 @@ MODULES=(... radeon ...)
 
 ## Display Manager
  - `# pacman -Sy lightdm lightdm-gtk-greeter`
+ - `# pacman -Sy xdm-archlinux`
+ - Make sure ``/.xinitrc` has execution permission, otherwise `xdm` cannot launch session.
 
 ## Fonts
  - `# pacman -Sy noto-fonts ttf-dejavu ttf-liberation ttf-inconsolata terminus-font ttf-font-awesome`
