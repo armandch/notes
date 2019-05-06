@@ -122,13 +122,47 @@ MODULES=(... radeon ...)
  - `# pacman -Sy chromium firefox vlc`
 
 ## Sound driver and tools
+ - [https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Installation](Arch Linux Wiki)
  - `# pacman -Sy alsa-utils alsa-plugins alsa-lib pavucontrol`
  - `$ aplay -l`
  - `$ lspci | grep -i audio`
  - `$ ls -l /dev/snd`
- - `$ alsamixer -c 2`
- - `$ speaker-test -c 2 -D hw:1,1`
+ - `$ alsamixer -c 1`
+ - `$ amixer scontrols`
+ - `amixer -c 1 cset name='IEC958 Playback Switch' on`
+ - `$ speaker-test -c 1 -D hw:1,1`
+ - `~/.asoundrc`
+```
+pcm.!default {
+    type hw
+    card MID
+}
 
+ctl.!default {
+    type hw
+    card MID
+}
+```
+- Also, Firefox needs pulseaudio.  Refer to Arch Wiki to install and configure.
+
+
+## Chinese configurations
+ -  `# pacman -S fcitx fcitx-configtool fcitx-chewing`
+ - `~/.Xresources`
+```
+URxvt.inputMethod: fcitx
+```
+ - `~/.bashrc`
+```
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export LC_CTYPE=en_US.UTF-8
+```
+ - `~/.config/i3/config`
+```
+exec --no-startup-id fcitx -d
+```
 
 # Customization
 
