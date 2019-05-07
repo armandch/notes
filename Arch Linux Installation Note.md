@@ -171,4 +171,6 @@ exec --no-startup-id fcitx -d
 ## Pacman
  - `/etc/pacman.conf`: Uncomment `Color`
 
+## Firefox
+ - `about:config`: `layers.acceleration.force-enabled` set to true to prevent tearing when scroll pages.
 
