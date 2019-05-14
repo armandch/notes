@@ -1,2 +1,2 @@
-# archlinux-installation-note
-My Arch Linux Installation Node
+# notes
+My notes.
