@@ -49,6 +49,11 @@ DHCP=ipv4
  - `# ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
 
 
+## Firewall
+ - `# systemctl enable iptables.service`
+ - `# systemctl start iptables.service`
+
+
 # Time Configuration
 
 ## Configure `systemd-timesyncd`
@@ -104,7 +109,7 @@ MODULES=(... radeon ...)
  - `# mkinitcpio -p linux`
 
 ## X.org
- - `# pacman -Sy xorg-server xorg-apps xorg-xinit i3 numlockx`
+ - `# pacman -Sy xorg-server xorg-apps xorg-xinit i3`
 
 ## Display Manager
  - `# pacman -Sy lightdm lightdm-gtk-greeter`
@@ -145,7 +150,29 @@ ctl.!default {
     card MID
 }
 ```
-- Also, Firefox needs pulseaudio.  Refer to Arch Wiki to install and configure.
+ - Also, Firefox needs pulseaudio.  Refer to Arch Wiki to install and configure.
+
+
+## Microcode update
+ - `# pacman -S intel-ucode`
+ - `# grub-mkconfig -o /boot/grub/grub.cfg`
+ - Verify: `$ dmesg | grep microcode`
+
+
+## CPU Scaling
+ - `# pacman -S cpupower`
+ - `# cpupower frequency-set -g [performance|schedutil]`
+ - Verify: `$ cpupower frequency-info`
+ - Monitor: `$ watch grep \"cpu MHz\" /proc/cpuinfo`
+ - `/etc/default/cpupower`
+```
+governor='schedutil'
+```
+ - `# systemctl enable cpupower.service`
+
+
+## Solid state drive performance
+ - Don't do it if you enabled dm-crypt!!!
 
 
 ## Chinese configurations
