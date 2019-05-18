@@ -193,6 +193,7 @@ export LC_CTYPE=en_US.UTF-8
 exec --no-startup-id fcitx -d
 ```
 
+
 # Customization
 
 ## Pacman
@@ -200,4 +201,17 @@ exec --no-startup-id fcitx -d
 
 ## Firefox
  - `about:config`: `layers.acceleration.force-enabled` set to true to prevent tearing when scroll pages.
+
+
+## Turn off CPU exploit mitigations (not recommended)
+ - Turning off CPU exploit mitigations against Spectre/Meltdown improves performance at the cost of security, see phoronix.com, which can be acceptable for isolated linux systems.
+ - To turn off most of the mitigations, add the following arguments to the kernel commandline.
+```
+pti=off nospectre_v1 nospectre_v2 l1tf=off nospec_store_bypass_disable
+```
+
+
+## Turn off Watchdogs
+ - To disable watchdog timers (both software and hardware), append `nowatchdog` to your boot parameters.
+ - To check the new configuration do: `# cat /proc/sys/kernel/watchdog`
 
