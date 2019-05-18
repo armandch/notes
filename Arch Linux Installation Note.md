@@ -196,6 +196,11 @@ exec --no-startup-id fcitx -d
 
 # Customization
 
+## Vim
+ - `# pacman -S gvim`
+ - gvim has `+clipboard` built in.
+
+
 ## Pacman
  - `/etc/pacman.conf`: Uncomment `Color`
 
