@@ -1,0 +1,11 @@
+# Inform Notes
+
+## blorbtool
+```
+blorbtool.py -n my.gblorb import Exec 0 GLUL game.ulx
+blorbtool.py my.gblorb import Pict 1 JPEG pict-0.jpg
+blorbtool.py my.gblorb import Pict 2 JPEG pict-1.jpg
+blorbtool.py my.gblorb import Pict 3 JPEG pict-2.jpg
+blorbtool.py my.gblorb import Pict 4 JPEG pict-3.jpg
+blorbtool.py my.gblorb import Snd 5 MOD music-0.mod
+```
