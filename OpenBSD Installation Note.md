@@ -32,6 +32,11 @@
 3. Enable UEFI Boot in bios.
 4. `boot> machine video 3`
 5. `boot> boot`
+6. After installation is done, edit `/etc/boot.conf`:
+```
+machine video 3
+boot
+```
 
 ## Special Things to Do for Thinkpad X1C6 Before Installation
 1. Press ENTER to enter bios setup.
@@ -72,6 +77,9 @@
 1. `# echo 'https://fastly.cdn.openbsd.org/pub/OpenBSD' > /etc/installurl`
 2. `# syspatch`
 
+## Openup
+1. Install `openup` from [M:tier](https://stable.mtier.org/).
+
 ## softdep and noatime
 1. `# sed -i 's/rw/rw,softdep,noatime/' /etc/fstab`
 
@@ -85,6 +93,14 @@
 
 ## Add user to staff group
 1. `# usermod -G staff username`
+
+## X.org
+1. Starting with OpenBSD 6.5, the Xorg binary is no longer installed setuid, so startx(1) can no longer be used by non-root users. The xenodm(1) display manager has to be used instead.
+2. `# rcctl enable xenodm`
+3. `# rcctl start xenodm`
+
+## Troubleshooting: Relinking to create unique kernel failed
+1. `# sha256 /bsd > /var/db/kernel.SHA256`
 
 ## Display CJK Characters
 1. `# pkg_add noto_cjk`
