@@ -9,3 +9,11 @@ blorbtool.py my.gblorb import Pict 3 JPEG pict-2.jpg
 blorbtool.py my.gblorb import Pict 4 JPEG pict-3.jpg
 blorbtool.py my.gblorb import Snd 5 MOD music-0.mod
 ```
+
+## IFM
+sudo dnf install autoconf automake libtool flex byacc help2man
+autoreconf -f -i -Wall,no-obsolete
+./configure
+make
+sudo make install
+
