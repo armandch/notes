@@ -18,6 +18,16 @@ make
 sudo make install
 
 
+## Build frotz on macOS
+- Install MacPorts
+- sudo port install pkgconfig libao libsndfile libsamplerate freetype libpng libjpeg-turbo libsdl2 libsdl2_mixer
+- ./configure
+- make
+- make sdl
+- sudo make install
+- sudo make install_sdl
+
+
 ## Build SDL on CentOS 8
 hg clone https://hg.libsdl.org/SDL SDL
 cd SDL
