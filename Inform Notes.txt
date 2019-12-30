@@ -27,6 +27,15 @@ sudo make install
 - sudo make install
 - sudo make install_sdl
 
+## Build frotz on CentOS 7.7
+- `sudo yum install ncurses-devel libao-devel libmodplug-devel libsamplerate-devel libsndfile-devel libvorbis-devel SDL2-devel SDL2_mixer-devel freetype-devel libjpeg-turbo-devel`
+- Update CFLAGS in Makefile to use optimized settings instead of debugging.
+- Add `#include <stdint.h>` to `src/curses/ux_audio.c` to fix a bug with variable type.
+- Build frotz with audio support: `make`.
+- Install frotz: `sudo make install`.
+- Build sfrotz: `make sdl`.
+- Install sfrotz: `sudo make install_sdl`.
+
 
 ## Build SDL on CentOS 8
 hg clone https://hg.libsdl.org/SDL SDL
