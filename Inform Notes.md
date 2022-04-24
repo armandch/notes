@@ -36,7 +36,7 @@ sudo make install
 ## Build frotz on macOS
 - Install MacPorts
 - (Deprecated) sudo port install pkgconfig libao libsndfile libsamplerate freetype libpng libjpeg-turbo libsdl2 libsdl2_mixer
-- brew install pkg-config sdl2 sdl2_mixer freetype jpeg zlib libao libsndfile libsamplerate
+- brew install ncurses pkg-config sdl2 sdl2_mixer freetype jpeg zlib libao libsndfile libsamplerate
 - make
 - make sdl
 - sudo make install
