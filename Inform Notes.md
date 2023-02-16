@@ -37,6 +37,7 @@ sudo make install
 - Install MacPorts
 - (Deprecated) sudo port install pkgconfig libao libsndfile libsamplerate freetype libpng libjpeg-turbo libsdl2 libsdl2_mixer
 - brew install ncurses pkg-config sdl2 sdl2_mixer freetype jpeg zlib libao libsndfile libsamplerate
+- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/readline/lib/pkgconfig
 - make
 - make sdl
 - sudo make install
