@@ -37,16 +37,28 @@ sudo make install
 - Install MacPorts
 - (Deprecated) sudo port install pkgconfig libao libsndfile libsamplerate freetype libpng libjpeg-turbo libsdl2 libsdl2_mixer
 - brew install ncurses pkg-config sdl2 sdl2_mixer freetype jpeg zlib libao libsndfile libsamplerate libmodplug
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/ncurses/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/sdl2/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/sdl2_mixer/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/freetype/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libjpeg/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/zlib/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libao/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libsndfile/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libsamplerate/lib/pkgconfig
-- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libmodplug/lib/pkgconfig
+- Intel:
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/ncurses/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/sdl2/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/sdl2_mixer/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/freetype/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libjpeg/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/zlib/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libao/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libsndfile/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libsamplerate/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/libmodplug/lib/pkgconfig
+- Apple Silicon
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/ncurses/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/sdl2/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/sdl2_mixer/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/freetype/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/libjpeg/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/zlib/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/libao/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/libsndfile/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/libsamplerate/lib/pkgconfig
+  - export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/homebrew/opt/libmodplug/lib/pkgconfig
 - make
 - make sdl
 - sudo make install
