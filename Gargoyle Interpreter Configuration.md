@@ -5,4 +5,4 @@
 - `~/.garglkrc`
 
 # User theme path
-- `~/Library/Application Support/io.github.garglk/`
+- `~/Library/Application Support/io.github.garglk/Gargoyle/themes/*.json`
