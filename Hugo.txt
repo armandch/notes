@@ -1,0 +1,11 @@
+hugo new site armandch.me -f yml
+git init --initial-branch=master
+git submodule add https://github.com/janraasch/hugo-bearblog.git themes/hugo-bearblog
+git submodule update --init --recursive
+git submodule update --remote --merge
+echo 'theme: "hugo-bearblog"' >> config.yml
+
+hugo new posts/my-first-post.md
+
+hugo server --buildDrafts
+hugo server -D
